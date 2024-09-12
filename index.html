@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Water Gun Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-white text-center">
+  <div class="container p-5 mt-5 bg-light">
+    <h1 class="text-warning mt-5">Welcome to Snake Water Gun Game👇</h1>
+    <p class="text-info">Snake beats Water, Water beats Gun, and Gun beats Snake.</p>
+   
+    <form action="/play" method="post">
+      <label class="text-danger" for="user_choice">Select your choice:</label>
+      
+        <select name="user_choice" id="user_choice"class=" text-success"
+ >
+            <option value="snake">Snake 🐍</option>
+            <option value="water">Water 🌊</option>
+            <option value="Gun">Gun 🔫</option>
+        </select>
+      
+        <button class="btn btn-success mt-4 w-100"type="submit">Play 🙂</button>
+    </form>
+  </div>
+  <div class="container text-center">
+    {% if result %}
+    <h2>Game Result</h2>
+    <p>Your choice: {{ user_choice }}</p>
+    <p>Computer's choice: {{ computer_choice }}</p>
+    <p class="fs-1">{{ result }}</p>
+    {% endif %}
+    </div>
+    </div>
+</body>
+</html>
+        
