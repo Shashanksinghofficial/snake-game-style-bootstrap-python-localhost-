@@ -1,2 +1,2 @@
 # Snake-water-gun-game
-This is only learning purpose 
+we use python in this game not javascript, and python run on flask using terminal in local host
